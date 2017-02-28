@@ -1,0 +1,6 @@
+framework module Pods_AdAnalysisUITests {
+  umbrella header "Pods-AdAnalysisUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

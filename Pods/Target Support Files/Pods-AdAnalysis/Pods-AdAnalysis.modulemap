@@ -1,0 +1,6 @@
+framework module Pods_AdAnalysis {
+  umbrella header "Pods-AdAnalysis-umbrella.h"
+
+  export *
+  module * { export * }
+}
