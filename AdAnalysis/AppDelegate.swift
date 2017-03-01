@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        LeanCloud.initialize(applicationID: "QNdXQCnbWpIIDyqITLaE9fup-gzGzoHsz", applicationKey: "wi4YLyrl158R7yXfEaovCp1U")
+        
+        window = UIWindow(frame: UIScreen.main.bounds);
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = LCTabBarController();
         return true
     }
 

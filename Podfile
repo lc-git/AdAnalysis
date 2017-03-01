@@ -11,6 +11,8 @@ target 'AdAnalysis' do
   pod 'RxCocoa',    '~> 3.0'
   pod 'RxDataSources', '~> 1.0'
   pod 'Moya/RxSwift'
+  pod 'SnapKit', '~> 3.2.0'
+  pod 'PKHUD', '~> 4.0'
 
   target 'AdAnalysisTests' do
     inherit! :search_paths

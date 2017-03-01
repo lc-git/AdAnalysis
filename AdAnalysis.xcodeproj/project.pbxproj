@@ -16,6 +16,12 @@
 		E5BAD86F1E6508860089F9B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BAD86D1E6508860089F9B5 /* LaunchScreen.storyboard */; };
 		E5BAD87A1E6508860089F9B5 /* AdAnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8791E6508860089F9B5 /* AdAnalysisTests.swift */; };
 		E5BAD8851E6508860089F9B5 /* AdAnalysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8841E6508860089F9B5 /* AdAnalysisUITests.swift */; };
+		E5BAD8A31E66A44E0089F9B5 /* LCTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8A21E66A44E0089F9B5 /* LCTabBarController.swift */; };
+		E5BAD8A61E66A5540089F9B5 /* LCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8A51E66A5540089F9B5 /* LCViewController.swift */; };
+		E5BAD8A81E66A5990089F9B5 /* LCAdRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8A71E66A5990089F9B5 /* LCAdRootViewController.swift */; };
+		E5BAD8AA1E66A6AA0089F9B5 /* LCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */; };
+		E5BAD8AC1E66A9C70089F9B5 /* LCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8AB1E66A9C70089F9B5 /* LCNavigationController.swift */; };
+		E5BAD8AE1E66AD4F0089F9B5 /* LCAdRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8AD1E66AD4F0089F9B5 /* LCAdRootViewModel.swift */; };
 		FB2FC5A5B61E4341B2DB01DE /* Pods_AdAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B048AE4C7EDBBEA70D540D21 /* Pods_AdAnalysisTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +65,12 @@
 		E5BAD8801E6508860089F9B5 /* AdAnalysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdAnalysisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BAD8841E6508860089F9B5 /* AdAnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdAnalysisUITests.swift; sourceTree = "<group>"; };
 		E5BAD8861E6508860089F9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5BAD8A21E66A44E0089F9B5 /* LCTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCTabBarController.swift; sourceTree = "<group>"; };
+		E5BAD8A51E66A5540089F9B5 /* LCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCViewController.swift; path = Util/UI/LCViewController.swift; sourceTree = "<group>"; };
+		E5BAD8A71E66A5990089F9B5 /* LCAdRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdRootViewController.swift; path = Ad/ViewController/LCAdRootViewController.swift; sourceTree = "<group>"; };
+		E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCViewModel.swift; path = Util/UI/LCViewModel.swift; sourceTree = "<group>"; };
+		E5BAD8AB1E66A9C70089F9B5 /* LCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCNavigationController.swift; sourceTree = "<group>"; };
+		E5BAD8AD1E66AD4F0089F9B5 /* LCAdRootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdRootViewModel.swift; path = Ad/ViewModel/LCAdRootViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +149,10 @@
 		E5BAD8631E6508860089F9B5 /* AdAnalysis */ = {
 			isa = PBXGroup;
 			children = (
+				E5BAD8A21E66A44E0089F9B5 /* LCTabBarController.swift */,
+				E5BAD8AB1E66A9C70089F9B5 /* LCNavigationController.swift */,
+				E5BAD89B1E66A3610089F9B5 /* Ad */,
+				E5BAD89C1E66A37A0089F9B5 /* Util */,
 				E5BAD8641E6508860089F9B5 /* AppDelegate.swift */,
 				E5BAD8661E6508860089F9B5 /* ViewController.swift */,
 				E5BAD8681E6508860089F9B5 /* Main.storyboard */,
@@ -163,6 +179,72 @@
 				E5BAD8861E6508860089F9B5 /* Info.plist */,
 			);
 			path = AdAnalysisUITests;
+			sourceTree = "<group>";
+		};
+		E5BAD89B1E66A3610089F9B5 /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD89E1E66A3A20089F9B5 /* ViewController */,
+				E5BAD8A01E66A3B70089F9B5 /* ViewModel */,
+				E5BAD89F1E66A3AF0089F9B5 /* View */,
+				E5BAD8A11E66A3BF0089F9B5 /* Resource */,
+			);
+			name = Ad;
+			sourceTree = "<group>";
+		};
+		E5BAD89C1E66A37A0089F9B5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD8A41E66A4860089F9B5 /* UI */,
+				E5BAD89D1E66A3830089F9B5 /* Networking */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		E5BAD89D1E66A3830089F9B5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		E5BAD89E1E66A3A20089F9B5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD8A71E66A5990089F9B5 /* LCAdRootViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E5BAD89F1E66A3AF0089F9B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E5BAD8A01E66A3B70089F9B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD8AD1E66AD4F0089F9B5 /* LCAdRootViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5BAD8A11E66A3BF0089F9B5 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		E5BAD8A41E66A4860089F9B5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD8A51E66A5540089F9B5 /* LCViewController.swift */,
+				E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,8 +531,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5BAD8AC1E66A9C70089F9B5 /* LCNavigationController.swift in Sources */,
 				E5BAD8671E6508860089F9B5 /* ViewController.swift in Sources */,
+				E5BAD8A81E66A5990089F9B5 /* LCAdRootViewController.swift in Sources */,
 				E5BAD8651E6508860089F9B5 /* AppDelegate.swift in Sources */,
+				E5BAD8AA1E66A6AA0089F9B5 /* LCViewModel.swift in Sources */,
+				E5BAD8A31E66A44E0089F9B5 /* LCTabBarController.swift in Sources */,
+				E5BAD8AE1E66AD4F0089F9B5 /* LCAdRootViewModel.swift in Sources */,
+				E5BAD8A61E66A5540089F9B5 /* LCViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +795,7 @@
 				E5BAD88B1E6508860089F9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5BAD88C1E6508860089F9B5 /* Build configuration list for PBXNativeTarget "AdAnalysisTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +804,7 @@
 				E5BAD88E1E6508860089F9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5BAD88F1E6508860089F9B5 /* Build configuration list for PBXNativeTarget "AdAnalysisUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +813,7 @@
 				E5BAD8911E6508860089F9B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
