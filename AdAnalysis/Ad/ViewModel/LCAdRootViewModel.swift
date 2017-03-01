@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import LeanCloud
+import RxSwift
+import RxCocoa
 
 class LCAdRootViewModel: LCViewModel {
-    var dataArray = [Any]()
+    //let dataArray: Driver<[Any]>
     
+    override init() {
+        super.init()
+        
+    }
 }

@@ -22,6 +22,8 @@
 		E5BAD8AA1E66A6AA0089F9B5 /* LCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */; };
 		E5BAD8AC1E66A9C70089F9B5 /* LCNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8AB1E66A9C70089F9B5 /* LCNavigationController.swift */; };
 		E5BAD8AE1E66AD4F0089F9B5 /* LCAdRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8AD1E66AD4F0089F9B5 /* LCAdRootViewModel.swift */; };
+		E5BAD8B11E66C0670089F9B5 /* LCAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8B01E66C0670089F9B5 /* LCAd.swift */; };
+		E5BAD8B31E66C16A0089F9B5 /* LCVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8B21E66C16A0089F9B5 /* LCVisit.swift */; };
 		FB2FC5A5B61E4341B2DB01DE /* Pods_AdAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B048AE4C7EDBBEA70D540D21 /* Pods_AdAnalysisTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCViewModel.swift; path = Util/UI/LCViewModel.swift; sourceTree = "<group>"; };
 		E5BAD8AB1E66A9C70089F9B5 /* LCNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCNavigationController.swift; sourceTree = "<group>"; };
 		E5BAD8AD1E66AD4F0089F9B5 /* LCAdRootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdRootViewModel.swift; path = Ad/ViewModel/LCAdRootViewModel.swift; sourceTree = "<group>"; };
+		E5BAD8B01E66C0670089F9B5 /* LCAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAd.swift; path = Ad/Model/LCAd.swift; sourceTree = "<group>"; };
+		E5BAD8B21E66C16A0089F9B5 /* LCVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCVisit.swift; path = Ad/Model/LCVisit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 				E5BAD89E1E66A3A20089F9B5 /* ViewController */,
 				E5BAD8A01E66A3B70089F9B5 /* ViewModel */,
 				E5BAD89F1E66A3AF0089F9B5 /* View */,
+				E5BAD8AF1E66C0280089F9B5 /* Model */,
 				E5BAD8A11E66A3BF0089F9B5 /* Resource */,
 			);
 			name = Ad;
@@ -245,6 +250,15 @@
 				E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		E5BAD8AF1E66C0280089F9B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5BAD8B01E66C0670089F9B5 /* LCAd.swift */,
+				E5BAD8B21E66C16A0089F9B5 /* LCVisit.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +545,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5BAD8B31E66C16A0089F9B5 /* LCVisit.swift in Sources */,
+				E5BAD8B11E66C0670089F9B5 /* LCAd.swift in Sources */,
 				E5BAD8AC1E66A9C70089F9B5 /* LCNavigationController.swift in Sources */,
 				E5BAD8671E6508860089F9B5 /* ViewController.swift in Sources */,
 				E5BAD8A81E66A5990089F9B5 /* LCAdRootViewController.swift in Sources */,
