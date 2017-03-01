@@ -12,10 +12,22 @@ import RxSwift
 import RxCocoa
 
 class LCAdRootViewModel: LCViewModel {
-    //let dataArray: Driver<[Any]>
+    var dataArray: Variable<NSArray>!
     
     override init() {
+        dataArray = Variable([])
+        
         super.init()
         
+        let query = LCQuery(className: "Visit")
+        query.find { result in
+            switch result {
+            case .success(let objects):
+                self.dataArray.value = objects as NSArray
+                break
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
