@@ -1,4 +1,7 @@
 PODS:
+  - Action (2.2.1):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
   - Alamofire (4.2.0)
   - LeanCloud (10.0.0):
     - LeanCloud/Storage (= 10.0.0)
@@ -21,6 +24,7 @@ PODS:
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
+  - Action
   - LeanCloud
   - Moya/RxSwift
   - PKHUD (~> 4.0)
@@ -30,6 +34,7 @@ DEPENDENCIES:
   - SnapKit (~> 3.2.0)
 
 SPEC CHECKSUMS:
+  Action: 93c6c9eec95eb76428b2d49a6d260466c2f71b7e
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   LeanCloud: 0a6a0d52e33dd43d998ab256cc83f6c4954607b8
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
@@ -40,6 +45,6 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: 87cc1d7f62f4e6c1e4a7eff0251d562a760f5ef5
+PODFILE CHECKSUM: d691c4399c7f8f317942777110ded4ba66954e20
 
 COCOAPODS: 1.1.1

@@ -10,7 +10,7 @@ import UIKit
 
 class LCTabBarController: UITabBarController {
     
-    let adVC = LCAdRootViewController();
+    let adVC = LCAdRootViewController(viewModel:LCAdRootViewModel())
     
     init() {
         super.init(nibName: nil, bundle: nil)

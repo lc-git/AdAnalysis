@@ -13,6 +13,7 @@ target 'AdAnalysis' do
   pod 'Moya/RxSwift'
   pod 'SnapKit', '~> 3.2.0'
   pod 'PKHUD', '~> 4.0'
+  pod 'Action'
 
   target 'AdAnalysisTests' do
     inherit! :search_paths

@@ -16,7 +16,7 @@ class LCAdRootViewController: LCViewController {
     
     let reuseIdentifier = "adRootCellIndentifier"
     var tableView: UITableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
-    var viewModel = LCAdRootViewModel()
+    var tmpViewModel = LCAdRootViewModel()
     
     var disposeBag = DisposeBag()
 
@@ -28,7 +28,7 @@ class LCAdRootViewController: LCViewController {
         tableView.rowHeight = 72
         view.addSubview(tableView)
         
-        viewModel.subtitleArray.asObservable().subscribe { arr in
+        tmpViewModel.subtitleArray.asObservable().subscribe { arr in
             print(arr)
             self.tableView.reloadData()
         }.addDisposableTo(disposeBag)
@@ -52,12 +52,13 @@ class LCAdRootViewController: LCViewController {
     
     func add() {
         print("Add button pressed")
+        //navigationController?.pushViewController(LCAdNewViewController(), animated: true);
     }
 }
 
 extension LCAdRootViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.dataArray.value.count
+        return tmpViewModel.dataArray.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,10 +67,10 @@ extension LCAdRootViewController: UITableViewDataSource {
             cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
             cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         }
-        let ad = viewModel.dataArray.value[indexPath.row]
+        let ad = tmpViewModel.dataArray.value[indexPath.row]
         let title    = ad.get("title") as! LCString
         cell?.textLabel?.text = title.stringValue
-        let count: String = String(viewModel.subtitleArray.value[indexPath.row]) + "次点击"
+        let count: String = String(tmpViewModel.subtitleArray.value[indexPath.row]) + "次点击"
         cell?.detailTextLabel?.text = count;
         return cell!
     }
@@ -78,6 +79,9 @@ extension LCAdRootViewController: UITableViewDataSource {
 extension LCAdRootViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView .deselectRow(at: indexPath, animated: true)
+        let detailViewModel = LCAdDetailViewModel(ad: tmpViewModel.dataArray.value[indexPath.row])
+        let vc = LCAdDetailViewController(viewModel: detailViewModel)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

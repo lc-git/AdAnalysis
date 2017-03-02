@@ -26,6 +26,8 @@
 		E5BAD8B31E66C16A0089F9B5 /* LCVisit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8B21E66C16A0089F9B5 /* LCVisit.swift */; };
 		E5BAD8BA1E680D920089F9B5 /* LCAdNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8B91E680D920089F9B5 /* LCAdNewViewController.swift */; };
 		E5BAD8BC1E680DBD0089F9B5 /* LCAdNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8BB1E680DBD0089F9B5 /* LCAdNewViewModel.swift */; };
+		E5BAD8BE1E6812B40089F9B5 /* LCAdDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8BD1E6812B40089F9B5 /* LCAdDetailViewModel.swift */; };
+		E5BAD8C01E6812EA0089F9B5 /* LCAdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8BF1E6812EA0089F9B5 /* LCAdDetailViewController.swift */; };
 		FB2FC5A5B61E4341B2DB01DE /* Pods_AdAnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B048AE4C7EDBBEA70D540D21 /* Pods_AdAnalysisTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		E5BAD8B21E66C16A0089F9B5 /* LCVisit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCVisit.swift; path = Ad/Model/LCVisit.swift; sourceTree = "<group>"; };
 		E5BAD8B91E680D920089F9B5 /* LCAdNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdNewViewController.swift; path = Ad/ViewController/LCAdNewViewController.swift; sourceTree = "<group>"; };
 		E5BAD8BB1E680DBD0089F9B5 /* LCAdNewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdNewViewModel.swift; path = Ad/ViewModel/LCAdNewViewModel.swift; sourceTree = "<group>"; };
+		E5BAD8BD1E6812B40089F9B5 /* LCAdDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdDetailViewModel.swift; path = Ad/ViewModel/LCAdDetailViewModel.swift; sourceTree = "<group>"; };
+		E5BAD8BF1E6812EA0089F9B5 /* LCAdDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCAdDetailViewController.swift; path = Ad/ViewController/LCAdDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +226,7 @@
 			children = (
 				E5BAD8A71E66A5990089F9B5 /* LCAdRootViewController.swift */,
 				E5BAD8B91E680D920089F9B5 /* LCAdNewViewController.swift */,
+				E5BAD8BF1E6812EA0089F9B5 /* LCAdDetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 			children = (
 				E5BAD8AD1E66AD4F0089F9B5 /* LCAdRootViewModel.swift */,
 				E5BAD8BB1E680DBD0089F9B5 /* LCAdNewViewModel.swift */,
+				E5BAD8BD1E6812B40089F9B5 /* LCAdDetailViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -552,8 +558,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5BAD8BA1E680D920089F9B5 /* LCAdNewViewController.swift in Sources */,
+				E5BAD8C01E6812EA0089F9B5 /* LCAdDetailViewController.swift in Sources */,
 				E5BAD8B31E66C16A0089F9B5 /* LCVisit.swift in Sources */,
 				E5BAD8B11E66C0670089F9B5 /* LCAd.swift in Sources */,
+				E5BAD8BE1E6812B40089F9B5 /* LCAdDetailViewModel.swift in Sources */,
 				E5BAD8AC1E66A9C70089F9B5 /* LCNavigationController.swift in Sources */,
 				E5BAD8671E6508860089F9B5 /* ViewController.swift in Sources */,
 				E5BAD8A81E66A5990089F9B5 /* LCAdRootViewController.swift in Sources */,
