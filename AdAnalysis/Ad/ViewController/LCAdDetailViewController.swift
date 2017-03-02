@@ -22,6 +22,7 @@ class LCAdDetailViewController: LCViewController {
         addBtn.setTitle("Add Tag", for: UIControlState.normal)
         addBtn.setTitleColor(UIColor.blue, for: UIControlState.normal)
         view.addSubview(addBtn)
+        bindViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,5 +38,9 @@ class LCAdDetailViewController: LCViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    func bindViewModel() {
+        let vm: LCAdDetailViewModel = viewModel as! LCAdDetailViewModel
+        print(vm)
+    }
 }
