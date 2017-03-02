@@ -14,7 +14,7 @@ import LeanCloud
 
 class LCAdRootViewController: LCViewController {
     
-    let cellIdentifier = "adRootCellIndentifier"
+    let reuseIdentifier = "adRootCellIndentifier"
     var tableView: UITableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
     var viewModel = LCAdRootViewModel()
     
@@ -23,11 +23,12 @@ class LCAdRootViewController: LCViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 72
         view.addSubview(tableView)
         
-        viewModel.dataArray.asObservable().subscribe { arr in
+        viewModel.subtitleArray.asObservable().subscribe { arr in
             print(arr)
             self.tableView.reloadData()
         }.addDisposableTo(disposeBag)
@@ -35,6 +36,8 @@ class LCAdRootViewController: LCViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(add))
         
         tableView.snp.makeConstraints { make in
             make.left.right.top.equalTo(view)
@@ -46,6 +49,10 @@ class LCAdRootViewController: LCViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func add() {
+        print("Add button pressed")
+    }
 }
 
 extension LCAdRootViewController: UITableViewDataSource {
@@ -54,11 +61,23 @@ extension LCAdRootViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        let visit = viewModel.dataArray.value[indexPath.row] as! LCObject
-        let source    = visit.get("source") as! LCString
-        cell.textLabel?.text = source.stringValue
-        return cell
+        var cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier)
+        if (cell == nil) {
+            cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: reuseIdentifier)
+            cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+        }
+        let ad = viewModel.dataArray.value[indexPath.row]
+        let title    = ad.get("title") as! LCString
+        cell?.textLabel?.text = title.stringValue
+        let count: String = String(viewModel.subtitleArray.value[indexPath.row]) + "次点击"
+        cell?.detailTextLabel?.text = count;
+        return cell!
+    }
+}
+
+extension LCAdRootViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView .deselectRow(at: indexPath, animated: true)
     }
 }
 
