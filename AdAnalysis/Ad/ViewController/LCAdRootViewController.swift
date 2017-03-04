@@ -17,8 +17,6 @@ class LCAdRootViewController: LCViewController {
     let reuseIdentifier = "adRootCellIndentifier"
     var tableView: UITableView = UITableView(frame: CGRect.zero, style: UITableViewStyle.plain)
     var tmpViewModel = LCAdRootViewModel()
-    
-    var disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()

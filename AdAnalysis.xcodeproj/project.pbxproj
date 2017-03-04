@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ADD7B0970DE7B59301F23F7B /* Pods_AdAnalysisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EB135D86329F42AA9CDEF9 /* Pods_AdAnalysisUITests.framework */; };
 		B095F35D3F753BD83D734B35 /* Pods_AdAnalysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CBF0DF4D10F9034EAAD943 /* Pods_AdAnalysis.framework */; };
+		E500F1D81E6A9EC0001BCF81 /* LCWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E500F1D71E6A9EC0001BCF81 /* LCWireFrame.swift */; };
 		E5BAD8651E6508860089F9B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8641E6508860089F9B5 /* AppDelegate.swift */; };
 		E5BAD8671E6508860089F9B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BAD8661E6508860089F9B5 /* ViewController.swift */; };
 		E5BAD86A1E6508860089F9B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BAD8681E6508860089F9B5 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		BEC88F676BF51C543547DFF7 /* Pods-AdAnalysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdAnalysis.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AdAnalysis/Pods-AdAnalysis.debug.xcconfig"; sourceTree = "<group>"; };
 		C0CBF0DF4D10F9034EAAD943 /* Pods_AdAnalysis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdAnalysis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EB135D86329F42AA9CDEF9 /* Pods_AdAnalysisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdAnalysisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E500F1D71E6A9EC0001BCF81 /* LCWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LCWireFrame.swift; path = Util/UI/LCWireFrame.swift; sourceTree = "<group>"; };
 		E5BAD8611E6508860089F9B5 /* AdAnalysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdAnalysis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5BAD8641E6508860089F9B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5BAD8661E6508860089F9B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				E5BAD8A51E66A5540089F9B5 /* LCViewController.swift */,
 				E5BAD8A91E66A6AA0089F9B5 /* LCViewModel.swift */,
+				E500F1D71E6A9EC0001BCF81 /* LCWireFrame.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 				E5BAD8C01E6812EA0089F9B5 /* LCAdDetailViewController.swift in Sources */,
 				E5BAD8B31E66C16A0089F9B5 /* LCVisit.swift in Sources */,
 				E5BAD8B11E66C0670089F9B5 /* LCAd.swift in Sources */,
+				E500F1D81E6A9EC0001BCF81 /* LCWireFrame.swift in Sources */,
 				E5BAD8BE1E6812B40089F9B5 /* LCAdDetailViewModel.swift in Sources */,
 				E5BAD8AC1E66A9C70089F9B5 /* LCNavigationController.swift in Sources */,
 				E5BAD8671E6508860089F9B5 /* ViewController.swift in Sources */,

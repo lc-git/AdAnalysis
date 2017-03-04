@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import SnapKit
 
 class LCViewController: UIViewController {
     
     var viewModel: LCViewModel
+    
+    var disposeBag = DisposeBag()
     
     init(viewModel: LCViewModel) {
         self.viewModel = viewModel
