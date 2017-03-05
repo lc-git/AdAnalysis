@@ -11,6 +11,7 @@ import SnapKit
 import RxSwift
 import RxCocoa
 import LeanCloud
+import PKHUD
 
 class LCAdRootViewController: LCViewController {
     
@@ -26,10 +27,12 @@ class LCAdRootViewController: LCViewController {
         tableView.rowHeight = 72
         view.addSubview(tableView)
         
-        tmpViewModel.subtitleArray.asObservable().subscribe { arr in
+        tmpViewModel.dataArray.asObservable().subscribe { arr in
             print(arr)
             self.tableView.reloadData()
         }.addDisposableTo(disposeBag)
+        
+        bindViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +49,12 @@ class LCAdRootViewController: LCViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func bindViewModel() {
+        tmpViewModel.getListAction.executing.subscribe(onNext: { isExecuting in
+            self.loading.value = isExecuting
+        }).addDisposableTo(disposeBag)
     }
     
     func add() {
@@ -68,8 +77,8 @@ extension LCAdRootViewController: UITableViewDataSource {
         let ad = tmpViewModel.dataArray.value[indexPath.row]
         let title    = ad.get("title") as! LCString
         cell?.textLabel?.text = title.stringValue
-        let count: String = String(tmpViewModel.subtitleArray.value[indexPath.row]) + "次点击"
-        cell?.detailTextLabel?.text = count;
+        //let count: String = String(tmpViewModel.subtitleArray.value[indexPath.row]) + "次点击"
+        //cell?.detailTextLabel?.text = count;
         return cell!
     }
 }

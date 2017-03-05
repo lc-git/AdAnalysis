@@ -57,13 +57,13 @@ class LCAdDetailViewController: LCViewController {
     func bindViewModel() {
         let vm: LCAdDetailViewModel = viewModel as! LCAdDetailViewModel
         print(vm)
-        addTagBtn.rx.action = vm.addTagAction
+        addTagBtn.rx.action = vm.addTagBtnAction
         
         vm.dataArray.asObservable().subscribe { arr in
             print(arr)
             self.tableView.reloadData()
             }.addDisposableTo(disposeBag)
-
+        
     }
 }
 
@@ -82,7 +82,7 @@ extension LCAdDetailViewController: UITableViewDataSource {
         }
         
         let tag = vm.dataArray.value[indexPath.row]
-        let title    = tag.get("title") as! LCString
+        let title = tag.get("title") as! LCString
         let visitsNumber = tag.get("visitsNumber") as! LCNumber
         cell?.textLabel?.text = title.stringValue
         cell?.detailTextLabel?.text = String(visitsNumber.intValue!)

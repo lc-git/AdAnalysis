@@ -10,12 +10,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import PKHUD
 
 class LCViewController: UIViewController {
     
     var viewModel: LCViewModel
-    
     var disposeBag = DisposeBag()
+    
+    let loading = Variable(false)
     
     init(viewModel: LCViewModel) {
         self.viewModel = viewModel
@@ -29,8 +31,14 @@ class LCViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        loading.asObservable().subscribe(onNext: { isLoading in
+            if isLoading {
+                HUD.show(.progress)
+            } else {
+                HUD.hide()
+            }
+        }).addDisposableTo(disposeBag)
     }
 
     override func didReceiveMemoryWarning() {
