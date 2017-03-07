@@ -13,7 +13,6 @@ PODS:
   - Moya/RxSwift (8.0.2):
     - Moya/Core
     - RxSwift (~> 3.0)
-  - PageMenu (1.2.9)
   - PKHUD (4.2.0)
   - Result (3.2.1)
   - RxCocoa (3.2.0):
@@ -28,7 +27,6 @@ DEPENDENCIES:
   - Action
   - LeanCloud
   - Moya/RxSwift
-  - PageMenu
   - PKHUD (~> 4.0)
   - RxCocoa (~> 3.0)
   - RxDataSources (~> 1.0)
@@ -40,7 +38,6 @@ SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   LeanCloud: 0a6a0d52e33dd43d998ab256cc83f6c4954607b8
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
-  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
   PKHUD: 48af884cf00c2213b0313b739d914e6cab1c0f5e
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
@@ -48,6 +45,6 @@ SPEC CHECKSUMS:
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: f466202aee854121cd611f29188944dfd1e425ac
+PODFILE CHECKSUM: d691c4399c7f8f317942777110ded4ba66954e20
 
 COCOAPODS: 1.1.1
